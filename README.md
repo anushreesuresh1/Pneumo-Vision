@@ -1,2 +1,1 @@
-# PDF-Viewer
-A PDF viewer including a login page, an uploads page and a downloads page. The uploaded PDFs are stored in a database, which can be viewed by searching the PDF by its name on the search bar in the Downloads page. 
+Pneumo-Vision is a Pneumonia Detection Model which predicts the presence of pneumonia from an analysis of chest x-ray images. 
