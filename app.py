@@ -12,7 +12,7 @@ app = Flask(__name__)
 def index():
     if request.method == 'POST':
         # Get the uploaded image from the HTML form
-        image = request.files['image']
+        image = request.files['Chest_X-Ray']
 
         # Read and preprocess the image
         img = cv2.imdecode(np.fromstring(image.read(), np.uint8), cv2.IMREAD_COLOR)
@@ -25,10 +25,10 @@ def index():
         pneumonia_probability = prediction[0][0]
 
         # Render the prediction result in the HTML template
-        return render_template('result.html', probability=pneumonia_probability)
+        return render_template('uploads.php', probability=pneumonia_probability)
 
     # Render the HTML form template
-    return render_template('form.html')
+    return render_template('index.php')
 
 if __name__ == '__main__':
     app.run()
